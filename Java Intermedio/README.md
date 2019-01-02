@@ -1,4 +1,6 @@
 ## Java Intermedio
+### Descripcion
+En esta seccion se encuentra
 
 ### Indice
 1. Excepciones
@@ -40,4 +42,4 @@
 >* Servira múltiples clientes
 
 ### Retornos
-1. [Curso-Java](https://github.com/patoba/Curso-Java 'Curso Java')
+1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
