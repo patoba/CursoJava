@@ -1,17 +1,16 @@
 # Curso de Java Standard Edition
-- - - -
->## Objetivo
->> Proporcionar informacion suficiente para comprender Java SE con codigos de ejemplo
+## Objetivo
+> Proporcionar informacion suficiente para comprender Java SE con codigos de ejemplo
 
->## Descripcion del proyecto
->> Se encontrara teoria y codigos de ejemplo para todos los temas
+## Descripcion del proyecto
+> Se encontrara teoria y codigos de ejemplo para todos los temas
 
->## Indice
->>### Instalación de Java
+## Indice
+### Instalación de Java
 > * Instalación de Java en Windows / Mac
 > * Instalación de Java en Linux
 
->>### Java Basico
+### Java Basico
 > 1. Introducción a Java
 > 2. Introducción al paradigma orientado a objetos
 > 3. Manipulación de datos
@@ -19,7 +18,7 @@
 > 5. Herencia
 > 6. Polimorfismo
 
->>### Java Intermedio
+### Java Intermedio
 > 1. Excepciones
 > 2. Java Framework Collection
 > 3. Manejo de Flujos
