@@ -10,7 +10,7 @@
  * Instalación de Java en Windows / Mac
  * Instalación de Java en Linux
 
-### Java Basico
+### [Java Basico][1]
  1. Introducción a Java
  2. Introducción al paradigma orientado a objetos
  3. Manipulación de datos
@@ -24,3 +24,6 @@
  3. Manejo de Flujos
  4. Ṕrogramación Multihilo
  5. Computación Distribuida
+
+
+[1]: https://github.com/patoba/Curso-Java/tree/master/Java%20Basico 'Java Basico'
