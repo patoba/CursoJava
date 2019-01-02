@@ -1,6 +1,6 @@
 # Curso de Java Standard Edition
 ## Objetivo
-> Proporcionar informacion suficiente para comprender Java SE con codigos de ejemplo
+ Proporcionar informacion suficiente para comprender Java SE con codigos de ejemplo
 
 ## Descripcion del proyecto
 > Se encontrara teoria y codigos de ejemplo para todos los temas
