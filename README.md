@@ -10,15 +10,15 @@
  * Instalación de Java en Windows / Mac
  * Instalación de Java en Linux
 
-### Java Basico
- 1. Introducción a Java
- 2. Introducción al paradigma orientado a objetos
- 3. Manipulación de datos
- 4. Arreglos e Introducción a Java Collections
- 5. Herencia
- 6. Polimorfismo
+### 1. Java Basico
+ 1.1 Introducción a Java
+ 1.2 Introducción al paradigma orientado a objetos
+ 1.3 Manipulación de datos
+ 1.4 Arreglos e Introducción a Java Collections
+ 1.5 Herencia
+ 1.6 Polimorfismo
 
-### Java Intermedio
+### 2. Java Intermedio
  1. Excepciones
  2. Java Framework Collection
  3. Manejo de Flujos
