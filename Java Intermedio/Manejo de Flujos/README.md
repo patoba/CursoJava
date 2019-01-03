@@ -11,10 +11,15 @@
 #### 3. Flujo de bytes
 >* Clases abstractas InputStream y OutputStream
 
-### 4. Flujo de caracteres
+#### 4. Flujo de caracteres
 >* Clases abstractas Reader y Writer
 >* Clase InputStreamReader
 >* Clase BufferedReader
+
+#### 5. Manejor de archivos y directorios
+>* Clase File
+>* Clases FileOutputStrem y FileInputStream
+>* Copia de archivos a nivel de bytes
 
 ### Retornos
 1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
