@@ -9,7 +9,6 @@
 
 #### [2. Java Framework Collection](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#2-java-framework-collection-1)
 >* Introducción
->* Objetivo
 >* Composicion
 >* Ventajas
 
@@ -114,27 +113,46 @@ Un árbol es una estructura de datos que cada elemento posee maximo un antecesor
 
 ### 2. Java Framework Collection
 #### 2.1 Introducción
-Java Framework Collection (JFC) como su nombre lo indica es un framework que posee todas las estructuras de datos lineales, para facilitarnos la vida. En otros lenguajes (como C) si nosotros queremos usar alguna estructura de datos que no sea el arreglo, tendremos que programarla manualmente.
-#### 2.2 Objetivo
-JFC posee los siguientes objetivos:
-* El uso de las estructuras de datos es sencillo, práctico y eficiente.
-* 
-* 
-#### 2.3 Composicion
-JFC consiste en:
-*
-*
-*
-*
-#### 2.4 Ventajas
+Java Collection Framework  (JCF) como su nombre lo indica es un framework que posee todas las estructuras de datos lineales, para facilitarnos la vida. En otros lenguajes (como C) si nosotros queremos usar alguna estructura de datos que no sea el arreglo, tendremos que programarla manualmente.
+#### 2.2 Composicion
+JCF consiste en:
+* **Coleccion de Interfaces:** La base del framework son estas interfaces, que implementan los distintos tipos de colección (estructuras de datos lineales) como pilas, colas, listas, conjuntos.
+* **Clases Principales:** Son clases que implementan una o una serie de coleccion de interfaces y son las que usamos comunmente.
+* **Implementaciones Abstractas:** Existen implementacion abstractas de las clases principales, que mediante estas, podemos dar una configuracion especifica para su uso.
+* **Algoritmos:** Metódos estaticos que permiten realizar acciones muy comunes sobre cualquier objeto creado a partir de una colección del jfc, por ejemplo ordenar una lista.
+* **Implementación en Concurrencia:** Existen clases que estan hechas para trabajar con hilos, por ejemplo java.util.Vector
+
+Un diagrama que reprensenta el JCF es:
+
+
+**Cosas importantes del diagrama:**
+* Las principales interfaces usadas son Collection y Map. Mas adelante hablaremos de ellas.
+* LinkedList implementa dos interfaces List y Queue
+
+#### 2.3 Ventajas
+* Reduce el tiempo de programar
+* Reduce el tiempo de aprender api's sobre estructuras de datos, puesto que es suficiente aprender una.
 
 ### 3. Interfaces base y sus métodos
-#### 3.1 Interface Iterable
-#### 3.2 Interface Collection
-#### 3.3 Interfaz Map
-#### 3.4 Interface List
-#### 3.5 Interface Queue
-#### 3.6 Interface Set
+  
+#### 3.1 Interfaz Iterator
+La interfaz Iterator<E> permite que un objeto que implementa esta clase posea una serie de elementos, uno en a la vez. Donde <E> es una clase cualquiera con la que deseamos trabajar. Esta interfaz posee la misma funcionalidad que Enumeration<E>.
+  
+Esta interfaz es una mejora de la interfaz Enumeration<E>, se diferencia en que posee metodos con nombres mas cortos, y posee un metodo para eliminar un elemento de la serie de elementos.
+  
+posee 3 metodos:
+boolean    hasNext()    Regresa un booleano si posee un elemento mas.
+E          next()       Regresa el siguiente elemento.
+void       remove()     Elimina el ultimo elemento regresado por next().
+
+#### 3.2 Interfaz Iterable
+La interfaz Iterable permite que el objeto instanciado de una clase que implemente esta interfaz pueda ser puesto en un for-each. La interfaz Iterable se llama realmente Iterable<T> donde <T> puede ser cualquier clase ya sea de la Java Api o creada por un programador.
+
+#### 3.3 Interface Collection
+#### 3.4 Interfaz Map
+#### 3.5 Interface List
+#### 3.6 Interface Queue
+#### 3.7 Interface Set
 
 ### 4. Clases provenientes de List
 #### 4.1 Clase ArrayList
