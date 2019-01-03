@@ -136,7 +136,7 @@ Un diagrama que reprensenta el JCF es:
 ### 3. Interfaces base y sus métodos
   
 #### 3.1 Interfaz Iterator
-La interfaz Iterator<E> permite que un objeto que implementa esta clase posea una serie de elementos, uno en a la vez. Donde <E> es una clase cualquiera con la que deseamos trabajar. Esta interfaz posee la misma funcionalidad que Enumeration<E>.
+La interfaz Iterator'''<E>''' permite que un objeto que implementa esta clase posea una serie de elementos, uno en a la vez. Donde <E> es una clase cualquiera con la que deseamos trabajar. Esta interfaz posee la misma funcionalidad que Enumeration<E>.
   
 Esta interfaz es una mejora de la interfaz Enumeration<E>, se diferencia en que posee metodos con nombres mas cortos, y posee un metodo para eliminar un elemento de la serie de elementos.
   
