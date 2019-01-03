@@ -2,18 +2,18 @@
 
 ### Indice
 
-#### 1. Estructuras de datos
+#### [1. Estructuras de datos](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#1-estructuras-de-datos-1)
 >* Introducción
 >* Estructuras de Datos Lineales
 >* Estructuras de Datos no Lineales
 
-#### 2. Java Framework Collection
+#### [2. Java Framework Collection](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#2-java-framework-collection-1)
 >* Introducción
 >* Objetivo
 >* Composicion
 >* Ventajas
 
-#### 3. Interfaces base y sus métodos
+#### [3. Interfaces base y sus métodos](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#3-interfaces-base-y-sus-m%C3%A9todos-1)
 >* Interfaz Iterable
 >* Interfaz Collection 
 >* Interfaz Map
@@ -21,25 +21,25 @@
 >* Interfaz Queue
 >* Interfaz Set
 
-#### 4. Clases provenientes de List
+#### [4. Clases provenientes de List](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#4-clases-provenientes-de-list-1)
 >* Clase ArrayList
 >* Clase LinkedList
 >* Clase Vector
 >* ArrayList vs Vector vs LinkedList
 
-#### 5. Clases provenientes de Queue y Deque
+#### [5. Clases provenientes de Queue y Deque](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#5-clases-provenientes-de-queue-y-deque-1)
 >* Clase Priority Queue
 >* Clase ArrayDeque
 >* Clase LinkedList
 >* Priority Queue vs ArrayDeque vs LinkedList
 
-#### 6. Clases proveniente de Set
+#### [6. Clases proveniente de Set](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#6-clases-proveniente-de-set-1)
 >* Clase HashSet
 >* Clase LinkedHashSet
 >* Clase TreeSet
 >* HashSet vs LinkedHashSet vs TreeSet
 
-#### 7. Clases provenientes de Map
+#### [7. Clases provenientes de Map](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection#7-clases-provenientes-de-map-1)
 >* Clase TreeMap
 
 ### Retornos
@@ -65,10 +65,10 @@ En cuanto a la relacion de los datos se clasifican en dos grupos, estos grupos s
 Las estruturas de datos pueden determinar la complejidad de un algoritmo, en general la elección de estructuras de datos eficientes permite la creación de algoritmos eficientes. Algunos métodos de diseño de software destacan las estructuras de datos en lugar de los algoritmos para diseñar.
 
 Cada estructura de datos debe poseer un conjunto minimo de acciones (métodos), a estos se les conoce como el abc, o CRUD (create-Read-Update-Delete), y consiste en las siguientes acciones:
-* **Crear**: Acción que permite crear la estructura de datos (si se programa en orientado a objetos sera su constructor).
+* **Crear**: Acción que permite insertar un elemento en la estructura de datos (insercion).
 * **Read**: Acción pque permite leer la información almacenada en la estructura de datos.
 * **Update**: Acción que permite actualizar un dato que se encuentra almacenado en la estructura de datos.
-* **Delete**: Accion que permite borrar toda la estructura de datos, mejor dicho, permite liberar las celdas de memoria que almacenan la información de la estructura de datos.
+* **Delete**: Accion que permite borrar un elemento de la estructura de datos.
 
 #### 1.2 Estructuras de Datos Lineales
 Las estructuras de datos lineales son aquellas en las que cada dato posee maximo un sucesor y maximo un antecesor. 
@@ -84,10 +84,12 @@ No existe un almacenamiento 100% mejor que el otro, sino que uno se acopla más 
 
 
 #### 1.2. Ejemplos
-* Arreglos: Los datos se almacenan contiguamente en memoria.
-* Conjuntos: Coleccion de varios datos únicos.
-* Pilas: Sigue la filosofia FIFO (FIRST-IN FIRST-OUT), es decir el primer elemento (dato) que entra a la estructura es el primero que sale.
-* Colas: Sigue la filosofia LIFO (LAST-IN FIRST-OUT), es decir el ultimo elemento (dato) que entra a la estructura es el primero que sale. Puede ser de varios tipos:
+* Arreglo: Los datos se almacenan contiguamente en memoria. Puede ser de dos formas:
+  - Arreglo Estatico: Arreglo que nunca cambia la cantidad de elementos en tiempo de ejecución
+  - Arreglo Dinamico: Arreglo que cambia la cantidad de elementos en tiempo de ejecución
+* Conjunto: Coleccion de varios datos únicos.
+* Pila: Sigue la filosofia FIFO (FIRST-IN FIRST-OUT), es decir el primer elemento (dato) que entra a la estructura es el primero que sale.
+* Cola: Sigue la filosofia LIFO (LAST-IN FIRST-OUT), es decir el ultimo elemento (dato) que entra a la estructura es el primero que sale. Puede ser de varios tipos:
   - Cola Simple: Cola que sigue la filosofia lifo.
   - Cola Doble: Cola que permite añadir un elemento al principio y al final y permite eliminar un elemento del principio y el final
   - Cola Circular Simple: Cola simple en donde el sucesor del ultimo elemento es el primero, y posee un tamaño fijo.
@@ -99,14 +101,31 @@ No existe un almacenamiento 100% mejor que el otro, sino que uno se acopla más 
   - Lista Circular Simple: Lista simple donde el sucesor del ultimo elemento es el primero, y posee un tamaño fijo.
   - Lista Circular Doble: Lista doble en donde el sucesor del ultimo elemento es el primero y el antecesor del primer elemento es el ultimo, y posee un tamaño fijo.
 
-El **maximo** hace referencia a que puede poseer cero sucesores (en este caso el dato es el ultimo) o cero antecesores (en este caso el dato es el primero).
-#### 1.3 Estructuras de Datos no Lineales
+**Notas:**
 
+* El **maximo** hace referencia a que puede poseer cero sucesores (en este caso el dato es el ultimo) o cero antecesores (en este caso el dato es el primero).
+* La cola y la pila son unicamente filosofias, estas requerien ya sea de una lista o un arreglo para poder implementarse
+#### 1.3 Estructuras de Datos no Lineales
+Las estructuras de datos no lienales son estructuras en las que se puede tener varios sucesores y varios antecesores. El ejemplo por excelencia de una estructura de datos es el grafo.
+
+Un grafo G se compone de dos conjuntos, el conjunto de sus vertices V y el conjunto de sus aristas A. En otras palabras: G = {V, A}. Donde V es un conjunto no vacio donde se encuentran sus vertices, y A es un conjunto donde se encuentran las aristas.
+
+Un árbol es una estructura de datos que cada elemento posee maximo un antecesor y puede poseer varios sucesores.
 
 ### 2. Java Framework Collection
 #### 2.1 Introducción
+Java Framework Collection (JFC) como su nombre lo indica es un framework que posee todas las estructuras de datos lineales, para facilitarnos la vida. En otros lenguajes (como C) si nosotros queremos usar alguna estructura de datos que no sea el arreglo, tendremos que programarla manualmente.
 #### 2.2 Objetivo
+JFC posee los siguientes objetivos:
+* El uso de las estructuras de datos es sencillo, práctico y eficiente.
+* 
+* 
 #### 2.3 Composicion
+JFC consiste en:
+*
+*
+*
+*
 #### 2.4 Ventajas
 
 ### 3. Interfaces base y sus métodos
