@@ -27,4 +27,4 @@ En la documentación de Java se define excepción cómo *Un evento, el cual ocur
 
 Cuando un error ocurre dentro de un método, el método crea un objeto llamado excepción. El objeto excepción contiene información del error, incluyendo el tipo de error y el estado del programa cuando el error ocurrió.
 
-![](/img/img_01.gif)
+![](img/img_01.gif)
