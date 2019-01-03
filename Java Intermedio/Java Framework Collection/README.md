@@ -14,11 +14,12 @@
 >* Ventajas
 
 #### 3. Interfaces base y sus métodos
->* Interface Iterable
->* Interface Collection y Map
->* Interface List
->* Interface Queue
->* Interface Set
+>* Interfaz Iterable
+>* Interfaz Collection 
+>* Interfaz Map
+>* Interfaz List
+>* Interfaz Queue
+>* Interfaz Set
 
 #### 4. Clases provenientes de List
 >* Clase ArrayList
@@ -103,13 +104,36 @@ El **maximo** hace referencia a que puede poseer cero sucesores (en este caso el
 
 
 ### 2. Java Framework Collection
+#### 2.1 Introducción
+#### 2.2 Objetivo
+#### 2.3 Composicion
+#### 2.4 Ventajas
 
 ### 3. Interfaces base y sus métodos
+#### 3.1 Interface Iterable
+#### 3.2 Interface Collection
+#### 3.3 Interfaz Map
+#### 3.4 Interface List
+#### 3.5 Interface Queue
+#### 3.6 Interface Set
 
 ### 4. Clases provenientes de List
+#### 4.1 Clase ArrayList
+#### 4.2 Clase LinkedList
+#### 4.3 Clase Vector
+#### 4.4 ArrayList vs Vector vs LinkedList
 
 ### 5. Clases provenientes de Queue y Deque
+#### 5.1 Clase Priority Queue
+#### 5.2 Clase ArrayDeque
+#### 5.3 Clase LinkedList
+#### 5.4 Priority Queue vs ArrayDeque vs LinkedList
 
 ### 6. Clases proveniente de Set
+#### 6.1 Clase HashSet
+#### 6.2 Clase LinkedHashSet
+#### 6.3 Clase TreeSet
+#### 6.4 HashSet vs LinkedHashSet vs TreeSet
 
 ### 7. Clases provenientes de Map
+#### 7.1 Clase TreeMap
