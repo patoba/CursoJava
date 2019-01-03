@@ -141,8 +141,11 @@ La interfaz Iterator<E> permite que un objeto que implementa esta clase posea un
 Esta interfaz es una mejora de la interfaz Enumeration<E>, se diferencia en que posee metodos con nombres mas cortos, y posee un metodo para eliminar un elemento de la serie de elementos.
   
 posee 3 metodos:
+
 boolean    hasNext()    Regresa un booleano si posee un elemento mas.
+
 E          next()       Regresa el siguiente elemento.
+
 void       remove()     Elimina el ultimo elemento regresado por next().
 
 #### 3.2 Interfaz Iterable
