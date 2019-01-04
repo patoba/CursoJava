@@ -219,24 +219,68 @@ Hay 6 metodos nuevos, estos se agrupan por parajeas puesto que realizan la misma
 
 Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
 
-#### 3.7 Interface Set
+#### 3.7 Interface Dequeue
+La interfaz Dequeue`<E>` hereda de la interfaz Queue, y abstrae el concepto de una cola doble. Al ser una cola doble es posible añadir al principio y al final, esto genera nuevos metodos. Los metodos se clasifican de la misma forma que en la interfaz Queue, los que aplican sobre el primer elemento son:
+
+| Acción   | Arroja Excepción     | Regresa Booleano       |
+|----------|----------------------|------------------------|
+| Insertar | addFirst(E elemento) | offerFirst(E elemento) |
+| Eliminar | removeFirst()        | pollFirst()            |
+| Ver      | getFirst()           | peekFirst()            |
+
+los que aplican sobre el ultimo elemento son:
+
+| Acción   | Arroja Excepción    | Regresa Booleano      |
+|----------|---------------------|-----------------------|
+| Insertar | addLast(E elemento) | offerLast(E elemento) |
+| Eliminar | removeLast()        | pollLast()            |
+| Ver      | getLast()           | peekLast()            |
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html)
+
+#### 3.8 Interface Set
 La interfaz Queue`<E>` hereda de la interfaz Collection, por lo que posee todos sus métodos. Se caracteriza porque almacena elementos unicos. 
 
 Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)
 
 ### 4. Clases provenientes de List
 #### 4.1 Clase ArrayList
-La clase ArrayList implementa List por lo que posee todos sus metodos. Un ArrayList es la implementación de un arreglo dinamico, las funciones size, isEmpty, get, set, iterator, and listIterator se ejecutan en tiempo constante, pero los metodos add, y remove tardan de acuerdo al tamaño de elementos de la estructura.
+La clase ArrayList`<E>` implementa List por lo que posee todos sus metodos. Un ArrayList es la implementación de un arreglo dinamico, las funciones size, isEmpty, get, set, iterator, and listIterator se ejecutan en tiempo constante, pero los metodos add, y remove tardan de acuerdo al tamaño de elementos de la estructura.
+
+Para crear un ArrayList hay que importarlo:
+`
+import java.util.ArrayList;
+`
+para crear un objeto ArrayList:
+`
+ArrayList<E> arreglo = new ArrayList();
+`
 
 Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
 
 #### 4.2 Clase LinkedList
-La clase LinkedList implementa List por lo que posee todos sus metodos. LinkedList es la implementación de una lista ligada doble. 
+La clase LinkedList`<E>`  implementa List por lo que posee todos sus metodos. LinkedList es la implementación de una lista ligada doble. 
+Para crear un LinkedList hay que importarlo:
+`
+import java.util.LinkedList;
+`
+para crear un objeto LinkedList:
+`
+LinkedList<E> arreglo = new LinkedList();
+`
 
 Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)
 
 #### 4.3 Clase Vector
 La clase Vector implementa List por lo que posee todos sus metodos. Vector esta hecho para trabajar en un ambiente de hilos, posee 3 atributos:
+Para crear un Vector hay que importarlo:
+`
+import java.util.Vector;
+`
+para crear un objeto Vector:
+`
+LinkedList<E> arreglo = new Vector();
+`
 
 | Modificador | Identificador     | Descripcion                                                                                                                |
 |-------------|-------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -263,11 +307,37 @@ En general la elección de uno u otro depende con lo que se este trabajando:
 * Si no se trabaja con hilos, y se trabaja con poca cantidad de datos, lo mejor es usar ArrayList.
 * Si no se trabaja con hilos, y se trabaja con gran cantidad de datos, lo mejor es un LinkedList.
 
+***Nota:**
+
+Es posible hacer que un ArrayList ó un LinkedList puedan trabajar de forma correcta en un ambiente de hilos, de la siguiente forma:
+`
+import java.util.Collections;
+ArrayList lista = Collections.synchronizedList(new ArrayList(...));
+`
+
 ### 5. Clases provenientes de Queue y Deque
-#### 5.1 Clase Priority Queue
+#### 5.1 Clase PriorityQueue
+PriorityQueue implementa la interfaz Queue asi que posee todos sus metodos, la filosofia que sigue a la hora de añadir y sacar elementos es la de insertar en donde corresponda (comparando) y sacar el primero (el que sea menor a todos). Esta clase no permite la insercion de elementos nulos ni tampoco permite la insercion de objetos que provengan de una clase que no haya implementado Comparator.
+
+Se llama PriorityQueue porque siempre saca primero el mas importante (el que sea el menor a todos).
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)
+
 #### 5.2 Clase ArrayDeque
+ArrayDeque implementa la interfaz Deque por lo que posee todos sus metodos. ArrayDeque abstrae el concepto de cola doble, esta clase es mas rapida que la clase Stack cuando se trabaja como una pila, y mas rapida que LinkedList cuando se trabaja como una Cola.
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)
+
 #### 5.3 Clase LinkedList
-#### 5.4 Priority Queue vs ArrayDeque vs LinkedList
+LinkedList ademas de implementar List implementa Deque, por lo que posee metodos tanto de List como los de Deque. Al implementar ambas interfaces permite al programador usarlo de diversas formas por la variedad de metodos. Aunque si se desea usar solamente como cola ArrayDeque es una mejor opción.
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)
+
+#### 5.4 PriorityQueue vs ArrayDeque vs LinkedList
+En general la elección de uno u otro depende del uso que se quiera dar.
+* Si se desea trabajar con objetos que posean una prioridad mayor a otros los mejor es usar PriorityQueue.
+* Si se desea trabajar con una cola ya sea simple o doble lo mejor es usar ArrayDuque.
+* Si se desea trabajar con objetos que posean metodos tanto de listas como de colas lo mejor es usar LinkedList.
 
 ### 6. Clases proveniente de Set
 #### 6.1 Clase HashSet
