@@ -200,7 +200,7 @@ Algunos métodos nuevos de List son:
 |-----------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
 | E               | remove(int indice)        | Elimina el objeto ubicado en el índice y lo regresa.                                                              |
 | E               | set(int indice, E objeto) | Sobreescribe el objeto que se encuentra en el índice con el recibido como parámetro y regresa el anterior objeto. |
-| int             | get(int                   | indice)                                                                                                           |
+| int             | lastIndexOf(Tipo objeto)  | Regresa el índice de la última ocurrencia del objeto dado.                                                                                                           |
 | int             | indexOf(Tipo objeto)      | Regresa el índice de la primera ocurrencia del objeto dado.                                                       |
 | E               | get(int indice)           | Regresa el objeto ubicado en el índice dado.                                                                      |
 
@@ -215,7 +215,7 @@ Hay 6 metodos nuevos, estos se agrupan por parajeas puesto que realizan la misma
 |---------------|------------------|-------------------|
 | Insertar      | add(E elemento)  | offer(E elemento) |
 | Eliminar      | remove()         | poll()            |
-| Ver           | get()            | peek()            |
+| Ver           | element()        | peek()            |
 
 Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
 
@@ -226,9 +226,42 @@ Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/
 
 ### 4. Clases provenientes de List
 #### 4.1 Clase ArrayList
+La clase ArrayList implementa List por lo que posee todos sus metodos. Un ArrayList es la implementación de un arreglo dinamico, las funciones size, isEmpty, get, set, iterator, and listIterator se ejecutan en tiempo constante, pero los metodos add, y remove tardan de acuerdo al tamaño de elementos de la estructura.
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
+
 #### 4.2 Clase LinkedList
+La clase LinkedList implementa List por lo que posee todos sus metodos. LinkedList es la implementación de una lista ligada doble. 
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)
+
 #### 4.3 Clase Vector
+La clase Vector implementa List por lo que posee todos sus metodos. Vector esta hecho para trabajar en un ambiente de hilos, posee 3 atributos:
+
+| Modificador | Identificador     | Descripcion                                                                                                                |
+|-------------|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| protected   | capacityIncrement | Entero que indica la capacidad que aumentará cuando supere el tamaño, si es menor a uno incrementara el doble de su tamaño |
+| protected   | elementCount      | Número que indica la cantidad de elementos del vector                                                                      |
+| protected   | elementData       | Arreglo donde estan contenidos todos los elementos del vector                                                              |
+
+Posee metodos relacionados con el trabajo concurrente:
+
+| Tipo |                     | Descripcion                                                         |
+|------|---------------------|---------------------------------------------------------------------|
+| void | setSize(int tamano) | Establece el tamaño del vector                                      |
+| E    | firstElement()      | Regresa el primer elemento del vector                               |
+| int  | capacity()          | Regresa la capacidad del vector (cantidad máxima que puede guardar) |
+| int  | size()              | Regresa la cantidad de elementos que tiene guardado                 |
+
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)
+
 #### 4.4 ArrayList vs Vector vs LinkedList
+
+En general la elección de uno u otro depende con lo que se este trabajando:
+* Si se trabaja con hilos, lo mejor es ocupar Vector.
+* Si no se trabaja con hilos, y se trabaja con poca cantidad de datos, lo mejor es usar ArrayList.
+* Si no se trabaja con hilos, y se trabaja con gran cantidad de datos, lo mejor es un LinkedList.
 
 ### 5. Clases provenientes de Queue y Deque
 #### 5.1 Clase Priority Queue
