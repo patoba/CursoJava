@@ -140,22 +140,89 @@ La interfaz Iterator`<E>` permite que un objeto que implementa esta clase posea 
   
 Esta interfaz es una mejora de la interfaz Enumeration`<E>`, se diferencia en que posee metodos con nombres mas cortos, y posee un metodo para eliminar un elemento de la serie de elementos.
   
-posee 3 metodos:
-
-boolean    hasNext()    Regresa un booleano si posee un elemento mas.
-
-E          next()       Regresa el siguiente elemento.
-
-void       remove()     Elimina el ultimo elemento regresado por next().
+Para checar todos los metodos [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)
 
 #### 3.2 Interfaz Iterable
 La interfaz Iterable permite que el objeto instanciado de una clase que implemente esta interfaz pueda ser puesto en un for-each. La interfaz Iterable se llama realmente Iterable`<T>` donde `<T>` puede ser cualquier clase ya sea de la Java Api o creada por un programador.
 
+Para ver todos los metodos [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)
+
 #### 3.3 Interface Collection
+La interfaz Collection`<E>` hereda de Iterable`<E>` y es la raíz de todas las colecciones del JCF, existen colecciones que estan ordenadas otras que no, existen colecciones que son elementos único otras que no. Collection es el padre de 3 interfaces que cumplen con este objetivo: Set, List, Queue. 
+
+Todas las clases que implementen en algun momento Collection poseen por lo menos 2 constructores: 
+* *Con parametros nulos:* Permite la creación de una estructura vacia.
+* *Como parametro un objecto Collection:* Realiza una copia del objeto pasado como parametro en el objeto a crear.
+
+Los metodos mas importantes de la interfaz Collection`<E>` son:
+
+| Dato de Retorno | Cabecera             | Descripción                                                                                                           |
+|-----------------|----------------------|-----------------------------------------------------------------------------------------------------------------------|
+| boolean         | add(E ejemplo)       | Agrega un elemento a la colección. Regresa true si pudo hacerlo.                                                      |
+| void            | clear()              | Borra todos los elementos de la colección                                                                             |
+| boolean         | contains(E ejemplo)  | Regresa true si se encuentra el objeto ejemplo en la colección                                                        |
+| boolean         | isEmpty()            | Regresa true si la coleccion esta vacia.                                                                              |
+| boolean         | remove(Tipo ejemplo) | Borra el objeto ejemplo de la colección, regresa true si lo pudo hacer y false si no existe el objeto en la colección |
+| int             | size()               | Determina el tamaño de la colección                                                                                   |
+| E[]             | toArray()            | Regresa un arreglo estático de la colección                                                                           |
+
+Para checar el resto de metodos [haz click aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
+
 #### 3.4 Interfaz Map
+La interfaz Map no esta relacionada con Collection, porque su filosofia es almacenar elementos que posean una llave unica, es decir, almacena de la forma clave-valor. Cabe resaltar que cada clave es unica, y dos o mas claves pueden estar asociadas a un mismo valor. Esta interfaz es implementada por varias clases que hablaremos de ellas mas adelante.
+
+En una interfaz Map<K,V> K es la clase a las que pertenece el conjunto de llaves y V es la clase a las que pertenece el conjutno de valores. Hay que tener cuidado con el conjunto de claves, puesto que no se pueden repetir, y con usar objetos mutables como llaves.
+
+Algunos métodos importantes de Map son:
+
+| Dato de Retorno | Cabecera                  | Descripción                                                                                                                |
+|-----------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| void            | clear()                   | Borra todas las claves-valor del mapa                                                                                      |
+| boolean         | containsKey(K clave)      | Determina si la clave está en el mapa                                                                                      |
+| boolean         | containsValue(V valor)    | Determina si existe el valor asociado al mapa                                                                              |
+| V               | get(K clave)              | Regresa el valor asociado a la clave pasada como parámetro                                                                 |
+| boolean         | isEmpty()                 | Regresa true si el mapa está vacío y false en caso contrario                                                               |
+| Set`<K>`         | keySet()                  | Regresa un set con todas las claves del mapa                                                                               |
+| K               | remove(K clave)           | Elimina la clave (y su valor asociado) del mapa, y regresa el valor asociado                                               |
+| V               | put(K clave, V valor)     | Inserta la clave-valor en el mapa y regresa el valor pasado por parámetro                                                  |
+| K               | replace(K clave, V valor) | Reemplaza el valor de la clave (pasada por parámetro), con el nuevo valor pasada por parámetro, y regresa el antiguo valor |
+| int             | size()                    | Regresa la cantidad almacenada de clave-valor en el mapa                                                                   |
+| Collection`<V>`   | values()                  | Regresa una colección con los valores del mapa                                                                             |
+  
+Para ver el resto de métodos [haz click aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)
+
 #### 3.5 Interface List
+La interfaz List`<E>` hereda de la interfaz Collection, por lo que posee todos sus métodos. Un objeto que proviene de List posee una colección de objetos donde se pueden repetir. Aunque se llame List no necesariamente es un estructura de datos lista. En una interfaz List el usuario puede insertar elementos, eliminar elementos y buscar elementos a su antojo.
+
+Algunos métodos nuevos de List son:
+
+| Dato de Retorno | Cabecera                  | Descripción                                                                                                       |
+|-----------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
+| E               | remove(int indice)        | Elimina el objeto ubicado en el índice y lo regresa.                                                              |
+| E               | set(int indice, E objeto) | Sobreescribe el objeto que se encuentra en el índice con el recibido como parámetro y regresa el anterior objeto. |
+| int             | get(int                   | indice)                                                                                                           |
+| int             | indexOf(Tipo objeto)      | Regresa el índice de la primera ocurrencia del objeto dado.                                                       |
+| E               | get(int indice)           | Regresa el objeto ubicado en el índice dado.                                                                      |
+
+Para ver el resto de métodos [haz click aqui](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
+
 #### 3.6 Interface Queue
+La interfaz Queue`<E>` hereda de la interfaz Collection, por lo que posee todos sus métodos. Puede almacenar elementos repetidos, ademas se incluyen metodos para una organización de la información de la forma LIFO.
+
+Hay 6 metodos nuevos, estos se agrupan por parajeas puesto que realizan la misma funcionalidad con diferencia de que es lo que ocurre en caso de un fallo, los metodos nuevos son:
+
+| Funcionalidad | Arroja Excepcion | Regresa Booleano  |
+|---------------|------------------|-------------------|
+| Insertar      | add(E elemento)  | offer(E elemento) |
+| Eliminar      | remove()         | poll()            |
+| Ver           | get()            | peek()            |
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+
 #### 3.7 Interface Set
+La interfaz Queue`<E>` hereda de la interfaz Collection, por lo que posee todos sus métodos. Se caracteriza porque almacena elementos unicos. 
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)
 
 ### 4. Clases provenientes de List
 #### 4.1 Clase ArrayList
