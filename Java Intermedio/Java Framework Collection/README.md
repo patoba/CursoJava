@@ -58,7 +58,7 @@ Una estructura de datos es la forma en la cual una computadora organiza los dato
 * **Estructura de Datos Dinamica:** Su tamaño varia en tiempo de ejecución. (Por ejemplo: Una lista)
 
 En cuanto a la relacion de los datos se clasifican en dos grupos, estos grupos son:
-* **Estructuras de datos lineales:** Todos los datos posen maximo un sucesor y minimo un antecesores.
+* **Estructuras de datos lineales:** Todos los datos posen maximo un sucesor y minimo un antecesor.
 * **Estructuras de datos no lineales:** Los datos pueden tener n sucesores y n antecesores. Siendo n un numero entero mayor o igual a cero.
 
 Las estruturas de datos pueden determinar la complejidad de un algoritmo, en general la elección de estructuras de datos eficientes permite la creación de algoritmos eficientes. Algunos métodos de diseño de software destacan las estructuras de datos en lugar de los algoritmos para diseñar.
@@ -97,8 +97,8 @@ No existe un almacenamiento 100% mejor que el otro, sino que uno se acopla más 
 * Lista: Coleccion de varios elementos almacenados ligadamente en memoria, puede ser de los siguiente tipos:
   - Lista Simple: Coleccion de varios elementos almacenados ligadamente en memoria, donde solo se requiere la dirección de memoria del elemento posterior.
   - Lista Doble: oleccion de varios elementos almacenados ligadamente en memoria, donde solo se requiere la dirección de memoria del elemento posterior y el antecesor.
-  - Lista Circular Simple: Lista simple donde el sucesor del ultimo elemento es el primero, y posee un tamaño fijo.
-  - Lista Circular Doble: Lista doble en donde el sucesor del ultimo elemento es el primero y el antecesor del primer elemento es el ultimo, y posee un tamaño fijo.
+  - Lista Circular Simple: Lista simple donde el sucesor del ultimo elemento es el primero.
+  - Lista Circular Doble: Lista doble en donde el sucesor del ultimo elemento es el primero y el antecesor del primer elemento es el ultimo.
 
 **Notas:**
 
@@ -341,9 +341,40 @@ En general la elección de uno u otro depende del uso que se quiera dar.
 
 ### 6. Clases proveniente de Set
 #### 6.1 Clase HashSet
+HashSet hereda de la clase Set y posee todos sus métodos, esta clase almacena elementos unicos y no acepta repetidos. HashSet no posee conserva un orden en cuanto a la inserción de elementos, este va cambiando conforme se insertan datos.
+
 #### 6.2 Clase LinkedHashSet
+LinkedHashSet hereda de la clase Set y posee todos sus métodos, esta clase almacena elementos unicos y no acepta repetidos. LinkedHashSet conserva el orden en el cual los elementos fueron insertados.
+
 #### 6.3 Clase TreeSet
+TreeSet hereda de la clase Set y posee todos sus métodos, esta clase almacena elementos unicos y no acepta repetidos. Conforme se insertan los datos en un TreeSet este los va almacenando de menor a mayor, para usar esta estructura los objetos insertados deben de ser Comparator.
+
 #### 6.4 HashSet vs LinkedHashSet vs TreeSet
+En general HashSet es mas rapido que LinkedHashSet y TreeSet, pero si se desea conservar algun tipo de orden especifico lo mejor sera utilizar LinkedHashSet y TreeSet.
 
 ### 7. Clases provenientes de Map
-#### 7.1 Clase TreeMap
+#### 6.1 Clase HashMap
+HashMap hereda de la clase Map y posee todos sus métodos, almacena elementos de la forma clave-valor, siendo las claves unicas y los valores se pueden repetir. HashHashMapSet no posee conserva un orden en cuanto a la inserción de elementos, este va cambiando conforme se insertan datos.
+
+#### 6.2 Clase LinkedHashMap
+LinkedHashMap hereda de la clase Map y posee todos sus métodos, almacena elementos de la forma clave-valor, siendo las claves unicas y los valores se pueden repetir. LinkedHashMap conserva el orden en el cual los elementos fueron insertados.
+
+#### 6.3 Clase TreeMap
+TreeMap hereda de la clase Map y posee todos sus métodos, almacena elementos de la forma clave-valor, siendo las claves unicas y los valores se pueden repetir. Conforme se insertan los datos en un TreeMap este los va almacenando de menor a mayor, para usar esta estructura los objetos insertados deben de ser Comparator.
+
+#### 6.4 HashMap vs LinkedHashMap vs TreeMap
+En general HashMap es mas rapido que LinkedHashMap y TreeMap, pero si se desea conservar algun tipo de orden especifico lo mejor sera utilizar LinkedHashMap y TreeMap.
+
+### 7 Clase Collections
+La clase Collections es una clase de utilidad (Clase que posee puros metodos estaticos) cuyos metodos estan enfocados a trabajar con colecciones. Entre los metodos importantes se encuentran:
+
+| Regresa | Función                                                         | Descripción                                                                     |
+|---------|-----------------------------------------------------------------|---------------------------------------------------------------------------------|
+|  int    | binarySearch(List<? extends Comparable<? super T>> list, T key) | Permite buscar en una coleccion con elementos ordenados un especifico elemento. |
+| void    | copy(List<? super T> dest, List<? extends T> src)               | Permite copiar una lista en otra lista                                          |
+| boolean | disjoint(Collection<?> c1, Collection<?> c2)                    | Determina si dos colecciones son disjuntas                                      |
+| T       | max(Collection<? extends T> coll)                               | Determina el maximo de la coleccion                                             |
+| T       | max(Collection<? extends T> coll)                               | Determina el minimo de la coleccion                                             |
+| void    | sort(List<T> list)                                              | Permite ordenar una lista                                                       |
+
+Para ver mas información [presiona aqui](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
