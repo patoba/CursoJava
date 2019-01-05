@@ -30,6 +30,9 @@
 
 [4]: https://github.com/patoba/Curso-Java/tree/master/Java%20Basico 'Java Basico'
 
+[7]: https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos
+[8]: https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Arreglos%20e%20introducci%C3%B3n%20a%20Java%20Collections
+
 [11]: https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio 'Java Intermedio'
 [12]: https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Excepciones 'Excepciones'
 [13]: https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio/Java%20Framework%20Collection 'Java Framework Collection'
