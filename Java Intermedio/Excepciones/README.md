@@ -70,22 +70,22 @@ En la imagen anterior observamos una gran mayoria de las excepciones en Java. A 
 | ArrayIndexOutOfBoundException   | Es arrojada cuando se acceso a un indice ilegal de un arreglo.                            | Arreglo[-3]                       | 
 | ClassNotFoundException          | Es arrojada cuando se intenta acceder a una clase que no esta definida.                   | Class a = new ClaseNoExistente()   |
 
-| FileNotFoundException           | Esta excepción se genera cuando un archivo no es accesible o no se abre.                  |
+| FileNotFoundException           | Esta excepción se genera cuando un archivo no es accesible o no se abre.                  | -
                            |
 
-| IOException                     | Se lanza cuando una operación de input/output falla o se interrumpe.                      |
+| IOException                     | Se lanza cuando una operación de input/output falla o se interrumpe.                      |-
                            |
-| InterruptedException            | Se lanza cuando un hilo está esperando, durmiendo o procesando, y se interrumpe.          |
+| InterruptedException            | Se lanza cuando un hilo está esperando, durmiendo o procesando, y se interrumpe.          |-
                            |
-| NoSuchMethodException           | Se lanza cuando se accede a un método que no se encuentra.                                |
+| NoSuchMethodException           | Se lanza cuando se accede a un método que no se encuentra.                                |-
                            |
-| NullPointerException            | Es arrojada cuando se hace referencia a los miembros de un objeto nulo.                   |
+| NullPointerException            | Es arrojada cuando se hace referencia a los miembros de un objeto nulo.                   |-
                            |
-| Exception                       | Es arrojada cuando una excepción ocurre                                                   |
+| Exception                       | Es arrojada cuando una excepción ocurre                                                   |-
                            |
-| StringIndexOutOfBoundsException | Arrojado por la clase String cuando un índice es negativo o mayor al tamaño de la cadena. |
+| StringIndexOutOfBoundsException | Arrojado por la clase String cuando un índice es negativo o mayor al tamaño de la cadena. |-
                            |
-| RuntimeException                | Esto representa cualquier excepción que se produce durante el tiempo de ejecución.        |  
+| RuntimeException                | Esto representa cualquier excepción que se produce durante el tiempo de ejecución.        | - 
                            |
                            
 #### 2.3 Palabras reservadas try, catch y finally
