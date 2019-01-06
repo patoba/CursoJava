@@ -14,7 +14,7 @@
 #### [3. Clase Throwable](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#3-clase-throwable-1) 
 >*  Palabras reservadas throw y throws
 
-#### [4. Creacion de excepciones propias](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#4-creacion-de-excepciones-propias-1)
+#### [4. Creacion de excepciones propias](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#4-creación-de-excepciones-propias)
 
 ### Retornos
 1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
@@ -48,16 +48,28 @@ Las excepciones más comunes están contenidas en dos clases hijas de Exception,
 
 ### 2. Clase Exception
 #### 2.1 Introducción
-En el tema anterior, vimos que las situaciones de la clase Exception son las manejables y que se dividen en 2 tipos. Existe una gran variadad de excepciones, podemos verlas en la imagen siguiente. 
+La clase Exception es la clase padre de todos las Excepciones manejables. Algunos de los metodos más importante de Exception s emuestran a continuación.
+
+| Dato de Retorno | Cabecera                         | Descripción                                                                                                                    |
+|-----------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| void            | addSuppresed(Throwable objeto)   | Describe la excepción exacta que se arrojó                                                                                    |
+| void            | getMessage()                     | Retorna el mensaje de los detalles de este objeto Throwable                                                                    |
+| Throwable       | getCause()                       | Retorna la causa por la cual el throwable fue arrojado (La causa es el throwable que causo que este throwable fuera arrojado) |
+| void            | printStackTrace()                | Imprime la ruta de donde surgio la excepción.                                                                                  |
+
+En el tema anterior, vimos que las situaciones de la clase Exception son las manejables y que se dividen en 2 tipos. Existe una gran variedad de excepciones, podemos verlas en la imagen siguiente. 
 ![](img/img_02.gif)
 
 #### 2.2 Excepciones Básicas 
-En la imagen anterior observamos una gran mayoria de las excepciones en Java. A continuación definiremos unas cuantas de ellas
+En la imagen anterior observamos una gran mayoria de las excepciones en Java. A continuación definiremos unas cuantas de ellas.
 
+#### 2.3 Palabras reservadas try, catch y finally
 
 ### 3. Clase Throwable 
 #### 3.1 Introducción 
 Para evitar que exista una excepción , primero se tiene que arrojar desde alguna parte del código. Cualquier bloque de código puede arrojar excepciones. Pero existe una manera de definir en que momento en se va a arrojar una excepción en particular.
+
+#### 3.2 Palabras reservadas throw y throws 
 
 ### 4. Creación de excepciones propias
 
