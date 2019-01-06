@@ -74,32 +74,6 @@ No es recomendable importar todas las clases de un paquete, porque hace al compi
 
 Podemos crear paquetes usando la palabra reservada `package nombre.del.paquete;` (esta linea debe ser la primera de nuestro codigo), de esta forma indicamos que estamos en un paquete llamado "nombre.del.paquete", todo lo que queramo usar (clases, interfaces, excepciones, etc.) que no se encuentre en nuestro paquete hay que importarlo. Si no definimos un paquete se crea un paquete llamado `default`.
 
-En java para compilar usamos el mando javac, este posee opciones adicionales:
-
-```
-javac [opciones adicionales] [nombre de archivo .java]
-las opciones adicionales mas importantes son:
--d [ubicacion]  esta opcion (bandera) nos permite establecer donde queremos guardar los .class
--cp [ubicacion] esta bandera nos permite establecer donde se encuentra algunos .class que necesitamos
-```
-
-Por ejemplo, si deseamos compilar la class Ejemplo.java y queremos guardar la clase en una carpeta superior:
-
-```
-javac -d .. Ejemplo.java
-```
-
-Si queremos compilar todos los .java de una carpeta podemos usar el asterisco:
-
-```
-javac *.java
-```
-
-El comando
-
-
-
-
 #### 1.2 Encapsulamiento
 Encapsulamiento consiste en la ocultación de los atributos (campos) para que las demas clases (o determinadas) no puedan acceder directamente a ellos. En Java el encapsulamiento se representa con modificadores de acceso, en esta tabla se representa su valor:
 
@@ -200,6 +174,28 @@ Esto existe para conservar seguridad dentro de nuestro sistema.
 
 #### 1.5 Compilacion en java
 
+En java para compilar usamos el mando javac, este posee opciones adicionales:
+
+```
+javac [opciones adicionales] [nombre de archivo .java]
+las opciones adicionales mas importantes son:
+-d [ubicacion]  esta opcion (bandera) nos permite establecer donde queremos guardar los .class
+-cp [ubicacion] esta bandera nos permite establecer donde se encuentra algunos .class que necesitamos
+```
+
+Por ejemplo, si deseamos compilar la class Ejemplo.java y queremos guardar la clase en una carpeta superior:
+
+```
+javac -d .. Ejemplo.java
+```
+
+Si queremos compilar todos los .java de una carpeta podemos usar el asterisco:
+
+```
+javac *.java
+```
+
+El comando java que sirve para ejecutar un programa posee tambien las banderas -d y -cp.
 
 ### 2. Clase Math
 #### 2.1 Introducción
