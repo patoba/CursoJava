@@ -4,16 +4,17 @@
 
 ### Indice
 
-#### 1. Definición de error y excepcion
+#### [1. Definición de error y excepcion](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#1-definicion-de-error-y-excepción)
 
-#### 2. Interfaces base y sus métodos
->*  Palabras reservadas throw y throws
+#### [2. Clase Exception](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#2-clase-exception)
 
-#### 3. Clases de implementación
 >* Excepciones basicas
 >* Palabras reservadas try, catch y finally
 
-#### 4. Creacion de excepciones propias
+#### [3. Clase Throwable](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#3-clase-throwable) 
+>*  Palabras reservadas throw y throws
+
+#### [4. Creacion de excepciones propias](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#4-creacion-de-excepciones-basicas)
 
 ### Retornos
 1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
@@ -21,8 +22,8 @@
 - - - -
 
 
-### Definicion de error y excepción
-
+### 1. Definicion de error y excepción
+#### 1.1 Introducción
 En la documentación de Java se define excepción cómo *Un evento, el cual ocurre durante la ejecución de un programa, que interrumpe el flujo normal de las instrucciones del programa.* . 
 
 Cuando un error ocurre dentro de un método, el método crea un objeto llamado excepción. El objeto excepción contiene información del error, incluyendo el tipo de error y el estado del programa cuando el error ocurrió. Después de ue un metodo arroja una excepción Java intenta encontrar un manejador de excepcion, a este proceso se le llama *call stack*.
@@ -31,6 +32,7 @@ Cuando un error ocurre dentro de un método, el método crea un objeto llamado e
 
 Se dice que el sistema cacha la excepción si después de realizar una busqueda exhaustiva, no encuentra una manejador de excepción adecuado.
 
+#### 1.2 Definiciones
 Exception y error son clases hijas de la clase Throwable. Un objeto Throwable contiene la información del hilo en el momento que fue creado.
 
 Tanto exception como error son utilizadas para representar excepciones, situaciones que interrumpen el flujo del programa, pero son usadas para tratar excepciones distintas.
@@ -44,9 +46,20 @@ Las excepciones más comunes están contenidas en dos clases hijas de Exception,
 * **Comprobadas** : Situaciones provocadas por el programador. Ejemplo : Errores lógicos. 
 * **No Comprobadas** : Situaciones aparte del código del programa. Ejemplo: Ausencia de un archivo o un input mal puesto.
 
+### 2. Clase Exception
+#### 2.1 Introducción
+En el tema anterior, vimos que las situaciones de la clase Exception son las manejables y que se dividen en 2 tipos. Existe una gran variadad de excepciones, podemos verlas en la imagen siguiente. 
+![](img/img_02.gif)
 
-### Interfaces base y sus métodos 
+#### 2.2 Excepciones Básicas 
+En la imagen anterior observamos una gran mayoria de las excepciones en Java. A continuación definiremos unas cuantas de ellas
 
+
+### 3. Clase Throwable 
+#### 3.1 Introducción 
+Para evitar que exista una excepción , primero se tiene que arrojar desde alguna parte del código. Cualquier bloque de código puede arrojar excepciones. Pero existe una manera de definir en que momento en se va a arrojar una excepción en particular.
+
+### 4. Creación de excepciones propias
 
 
 
