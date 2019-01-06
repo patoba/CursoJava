@@ -68,7 +68,7 @@ En la imagen anterior observamos una gran mayoria de las excepciones en Java. A 
 |---------------------------------|-------------------------------------------------------------------------------------------|------------------------------------|
 | Arithmetic Exception            | Es arrojada cuando ocurre una excepción una operación aritmética.                         | División entre cero.                |
 | ArrayIndexOutOfBoundException   | Es arrojada cuando se acceso a un indice ilegal de un arreglo.                            | Arreglo[-3]                       | 
-| ClassNotFoundException          | Es arrojada cuando se intenta acceder a una clase que no esta definida.                   | Class a = new ClaseNoExistente();  |
+| ClassNotFoundException          | Es arrojada cuando se intenta acceder a una clase que no esta definida.                   | Class a = new ClaseNoExistente()   |
 | FileNotFoundException           | Esta excepción se genera cuando un archivo no es accesible o no se abre.                  |
                            |
 | IOException                     | Se lanza cuando una operación de input/output falla o se interrumpe.                      |
