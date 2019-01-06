@@ -63,31 +63,28 @@ En el tema anterior, vimos que las situaciones de la clase Exception son las man
 #### 2.2 Excepciones Básicas 
 En la imagen anterior observamos una gran mayoria de las excepciones en Java. A continuación definiremos unas cuantas de ellas.
 
-> Arithmetic Exception:
-Es arrojada cuando ocurre una excepción una operación aritmética. División entre cero.
-> ArrayIndexOutOfBoundException
-It is thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.
-> ClassNotFoundException
-This Exception is raised when we try to access a class whose definition is not found
-> FileNotFoundException
-This Exception is raised when a file is not accessible or does not open.
-> IOException
-It is thrown when an input-output operation failed or interrupted
-> InterruptedException
-It is thrown when a thread is waiting , sleeping , or doing some processing , and it is interrupted.
-> NoSuchFieldException
-It is thrown when a class does not contain the field (or variable) specified
-> NoSuchMethodException
-It is thrown when accessing a method which is not found.
-> NullPointerException
-This exception is raised when referring to the members of a null object. Null represents nothing
-> NumberFormatException
-This exception is raised when a method could not convert a string into a numeric format.
-> RuntimeException
-This represents any exception which occurs during runtime.
-> StringIndexOutOfBoundsException
-It is thrown by String class methods to indicate that an index is either negative than the size of the string
-
+| Excepción                       | Descripción                                                                               | Ejemplo                            |
+|---------------------------------|-------------------------------------------------------------------------------------------|------------------------------------|
+| Arithmetic Exception            | Es arrojada cuando ocurre una excepción una operación aritmética.                         | División entre cero.                |
+| ArrayIndexOutOfBoundException   | Es arrojada cuando se acceso a un indice ilegal de un arreglo.                            | Arreglo[-3]                       | 
+| ClassNotFoundException          | Es arrojada cuando se intenta acceder a una clase que no esta definida.                   | Class a = new ClaseNoExistente();  |
+| FileNotFoundException           | Esta excepción se genera cuando un archivo no es accesible o no se abre.                  |
+                           |
+| IOException                     | Se lanza cuando una operación de input/output falla o se interrumpe.                      |
+                           |
+| InterruptedException            | Se lanza cuando un hilo está esperando, durmiendo o procesando, y se interrumpe.          |
+                           |
+| NoSuchMethodException           | Se lanza cuando se accede a un método que no se encuentra.                                |
+                           |
+| NullPointerException            | Es arrojada cuando se hace referencia a los miembros de un objeto nulo.                   |
+                           |
+| Exception                       | Es arrojada cuando una excepción ocurre                                                   |
+                           |
+| StringIndexOutOfBoundsException | Arrojado por la clase String cuando un índice es negativo o mayor al tamaño de la cadena. |
+                           |
+| RuntimeException                | Esto representa cualquier excepción que se produce durante el tiempo de ejecución.        |  
+                           |
+                           
 #### 2.3 Palabras reservadas try, catch y finally
 
 ### 3. Clase Throwable 
