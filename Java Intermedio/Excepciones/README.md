@@ -86,14 +86,13 @@ Hasta el momento sabemos que las excepciones se pueden manejar pero para manejar
 
 ##### Try
 Para poder manejar una excepción lo primero que tenemos que hacer es definir en que parte del código puede sucitar. Esa parte es encerrada por un bloque try. 
-'''
 
+```
 try {
     codigo
 }
 bloque catch  . . .
-
-'''
+```
 
 ##### Catch
 
