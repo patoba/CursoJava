@@ -1,7 +1,5 @@
 ## Excepciones
 
-## Java Framework Collection
-
 ### Indice
 
 #### [1. Definición de error y excepcion](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#1-definicion-de-error-y-excepción)
@@ -135,8 +133,56 @@ Para evitar que exista una excepción , primero se tiene que arrojar desde algun
 
 #### 3.2 Palabras reservadas throw y throws 
 
-### 4. Creación de excepciones propias
+##### throw
+La palabra reservada throw es utilizada para arrojar explicitamente una excepción desde un bloque de código o un metodo. Solo se puede utilizar con clases que hereden de throwable. 
 
+```
+  public Object pop() {
+    Object obj;
+
+    if (size == 0) {
+        throw new EmptyStackException();
+    }
+  }
+```
+
+Puede ayudar a prevenir el mal funcionamiento de un programa, al arrojar la excepción por una condición creada.
+
+##### throws 
+La palabra reservada throws es utilizada en metodos en los que puede surgir una excepción. 
+
+```
+  class tst { 
+    public static void main(String[] args)throws InterruptedException 
+    { 
+        Thread.sleep(10000); 
+        System.out.println("Hello Geeks"); 
+    } 
+  } 
+```
+Tabla de diferencias de throw y throws
+
+| throw                                                                                        | throws                                                                                                     |
+|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| La palabra clave de lanzamiento de Java se utiliza para lanzar explícitamente una excepción. | La palabra clave de Java se utiliza para declarar una excepción.                                           |
+| La excepción marcada no se puede propagar usando solo lanzar.                                | Excepción comprobada se puede propagar con tiros.                                                          |
+| El lanzamiento es seguido por una instancia.                                                 | Los lanzamientos son seguidos por clase.                                                                   |
+| El tiro se utiliza dentro del método.                                                        | El tiro se utiliza dentro del método.                                                                      |
+| No puedes lanzar múltiples excepciones.                                                      | Puede declarar múltiples excepciones, por ejemplo.  public void method () lanza IOException, SQLException. |
+### 4. Creación de excepciones propias
+En el caso que no existiria una excepción especifica para un problema que se tenga, se puede crear una excepción propia. Esta excepción tiene que heredar de la clase Exception, para que pueda ser arrojable. 
+
+```
+  public class Clase extends Exception{
+    public Clase(){
+      super();
+    }
+    
+    public Clase(String message){
+      super(message + "mensaje propio")
+    }
+  }
+```
 
 
 
