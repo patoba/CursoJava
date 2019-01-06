@@ -33,7 +33,8 @@ Cuando un error ocurre dentro de un método, el método crea un objeto llamado e
 Se dice que el sistema cacha la excepción si después de realizar una busqueda exhaustiva, no encuentra una manejador de excepción adecuado.
 
 #### 1.2 Definiciones
-Exception y error son clases hijas de la clase Throwable. Un objeto Throwable contiene la información del hilo en el momento que fue creado.
+
+La clase throwable es la superclase de todos los errores y excepciones, solo las instancias de esta clase pueden ser arrojadas con throw y throws. Exception y error son clases hijas de la clase Throwable. Un objeto Throwable contiene la información del hilo en el momento que fue arrojado.
 
 Tanto exception como error son utilizadas para representar excepciones, situaciones que interrumpen el flujo del programa, pero son usadas para tratar excepciones distintas.
 
@@ -48,7 +49,7 @@ Las excepciones más comunes están contenidas en dos clases hijas de Exception,
 
 ### 2. Clase Exception
 #### 2.1 Introducción
-La clase Exception es la clase padre de todos las Excepciones manejables. Algunos de los metodos más importante de Exception s emuestran a continuación.
+La clase Exception es la clase padre de todos las Excepciones manejables. Algunos de los metodos más importante de Exception se muestran a continuación.
 
 | Dato de Retorno | Cabecera                         | Descripción                                                                                                                    |
 |-----------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -81,6 +82,23 @@ En la imagen anterior observamos una gran mayoria de las excepciones en Java. A 
 
                            
 #### 2.3 Palabras reservadas try, catch y finally
+Hasta el momento sabemos que las excepciones se pueden manejar pero para manejarlas, utilizamos tres bloques que son fundamentales para su manejo.
+
+##### Try
+Para poder manejar una excepción lo primero que tenemos que hacer es definir en que parte del código puede sucitar. Esa parte es encerrada por un bloque try. 
+'''
+
+try {
+    codigo
+}
+bloque catch  . . .
+
+'''
+
+##### Catch
+
+##### Finally
+
 
 ### 3. Clase Throwable 
 #### 3.1 Introducción 
