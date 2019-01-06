@@ -44,16 +44,16 @@
 
 ### 1. Introducción
 #### 1.1 Paquetes en Java
-Un paquete es un conjunto de clases, interfaces, enumeraciones, excepciones, errores, anotaciones y otros paquetes que cumplen un determinado objetivo. Asi como las clases siguen la notación UpperCammelCase, los paquetes siguen la siguiente notacion:
+Un paquete es un conjunto de clases, interfaces, enumeraciones, excepciones, errores, anotaciones y otros paquetes que cumplen un determinado objetivo. Así como las clases siguen la notación UpperCammelCase, los paquetes siguen la siguiente notación:
 
-1. Todo el nombre va con minusculas
+1. Todo el nombre va con minúsculas.
 2. Para separar palabras se usa puntos.
 
 Por ejemplo: `este.es.un.ejemplo`
 
 Los paquetes mas importantes de java son:
-* **java.lang:** Posee todas las clases necesarias para el funcionamiento de Java, no se requiere importar ninguna clase de este paquete puesto que todas las clases del paquete se importan por defecto. Contiene clases como String, Clases Envolventes, Clase Math, Object
-* **java.util:** Posee clases con funciones utiles (aunque no indispensables) para el funcionamiento de Java. Como scaner, las ArrayList.
+* **java.lang:** Posee todas las clases necesarias para el funcionamiento de Java, no se requiere importar ninguna clase de este paquete puesto que todas las clases del paquete se importan por defecto. Contiene clases como String, Clases Envolventes, Clase Math, Object.
+* **java.util:** Posee clases con funciones útiles (aunque no indispensables) para el funcionamiento de Java. Como Scanner, las ArrayList.
 * **javax.swing:** Posee clases para realizar interfaces graficas.
 * **java.math:**  Posee clases que permiten trabajar con cualquier entero y con cualquier decimal.
 * **java.io:** Posee clases que continen funciones de entrada y salida.
@@ -70,9 +70,8 @@ Para importar todas las clases de un paquete se realiza de la siguiente forma (p
 import java.util.*;
 `
 
-No es recomendable importar todas las clases de un paquete, porque hace al compilador un poco mas lento y genera errores si tenemos dos o mas clases con el mismo nombre. 
-
-Podemos crear paquetes usando la palabra reservada `package nombre.del.paquete;` (esta linea debe ser la primera de nuestro codigo), de esta forma indicamos que estamos en un paquete llamado "nombre.del.paquete", todo lo que queramo usar (clases, interfaces, excepciones, etc.) que no se encuentre en nuestro paquete hay que importarlo. Si no definimos un paquete se crea un paquete llamado `default`.
+No es recomendable importar todas las clases de un paquete, porque hace al compilador un poco más lento y genera errores si tenemos dos o más clases con el mismo nombre. 
+Podemos crear paquetes usando la palabra reservada `package nombre.del.paquete;` (esta línea debe ser la primera de nuestro código), de esta forma indicamos que estamos en un paquete llamado "nombre.del.paquete", todo lo que queramos usar (clases, interfaces, excepciones, etc.) que no se encuentre en nuestro paquete hay que importarlo. Si no definimos un paquete se crea un paquete llamado `default`.
 
 #### 1.2 Encapsulamiento
 Encapsulamiento consiste en la ocultación de los atributos (campos) para que las demas clases (o determinadas) no puedan acceder directamente a ellos. En Java el encapsulamiento se representa con modificadores de acceso, en esta tabla se representa su valor:
@@ -87,12 +86,13 @@ Encapsulamiento consiste en la ocultación de los atributos (campos) para que la
 
 **Notas:**
 * Subclase hace referencia a conceptos de herencia (se ve posteriormente).
-* Los modificadores de acceso se pueden aplicar a metodos, atributos, clases, interfaces, enumeraciones y excepciones. 
+* Los modificadores de acceso se pueden aplicar a métodos, atributos, clases, interfaces, enumeraciones y excepciones. 
 
 #### 1.3 Modificadores: final y static
-Un modificador permite realizar un cambio en una variable, metodo o clase.
+Un modificador permite realizar un cambio en una variable, método o clase.
+
 ##### 1.3.1 Final
-Final esta realcionado con la incapacidad para modificar una variable, metodo o clase. Final aplicado a un atributo, permite establecer dicho atributo como constante. Por ejemplo:
+Final está relacionado con la incapacidad para modificar una variable, método o clase.  Final aplicado a un atributo, permite establecer dicho atributo como constante. Por ejemplo:
 
 ```
 public class Ejemplo{
@@ -101,9 +101,9 @@ public class Ejemplo{
 }
 ```
 
-Una constante debe poseer su nombre en mayuscula, y de preferencia poseer el modificador de acceso public.
+Una constante debe poseer su nombre en mayúscula, y de preferencia poseer el modificador de acceso public.
 
-Final aplicado a un metodo, establece que dicho metodo no peude ser sobreescrito en una clase hija
+Final aplicado a un método, establece que dicho método no puede ser sobreescrito en una clase hija.
 
 ```
 public class Ejemplo{
@@ -115,7 +115,7 @@ public class Ejemplo{
 }
 ```
 
-Final aplicado a una clase, establece que ninguna clase pueda heredar de ella. Por ejemplo:
+Final aplicado a una clase, establece que ninguna clase puede heredar de ella. Por ejemplo:
 
 ```
 public final class Ejemplo{
@@ -124,7 +124,7 @@ public final class Ejemplo{
 ```
 
 ##### 1.3.2 Static
-Static esta relacionado con la no instancia de las cosas. Static aplicado a un atributo, permite que esta sea igual para cualquier intancia de la clase y puede ser accedida (si los modificadores de acceso lo permiten) por otra clase sin la necesidad de crear una instancia. Ejemplo:
+Static está relacionado con la no instancia de las cosas. Static aplicado a un atributo, permite que esta sea igual para cualquier instancia de la clase y puede ser accedida (si los modificadores de acceso lo permiten) por otra clase sin la necesidad de crear una instancia. Ejemplo:
 
 ```
 public class Ejemplo{
@@ -140,7 +140,7 @@ public class Ejemplo2{
 }
 ```
 
-Static aplicado a un metodo hace que ese metodo se pueda usar sin instanciar la clase, por ejemplo:
+Static aplicado a un método hace que ese método se pueda usar sin instanciar la clase, por ejemplo:
 
 
 ```
@@ -167,12 +167,12 @@ static se puede aplicar a una clase, pero tiene que ser una clase anidada.
 #### 1.4 Mutabilidad
 Mutabilidad hace referencia a el alteramiento de un objeto, es decir, poseemos objetos cuyo valor se puede modificar y otros cuyo valor no se puede modificar. Existen dos tipos de objetos en cuanto a su mutabilidad:
 
-* **Objetos Mutables:** Objetos que si se pasan como parametro de una funcion ó si se utiliza alguno de sus metodos pueden afectar su contenido. Por ejemplo: ArrayList
-* **Objetos no Mutables**: Objetos que si se pasan como parametro de una funcion ó si se utiliza alguno de sus metodos no pueden afectar su contenido. Por ejemplo: String
+* **Objetos Mutables:** Objetos que si se pasan como parámetro de una función ó si se utiliza alguno de sus métodos pueden afectar su contenido.  Por ejemplo: ArrayList
+* **Objetos no Mutables**: Objetos que si se pasan como parámetro de una función ó si se utiliza alguno de sus métodos no pueden afectan su contenido. Por ejemplo: String
 
 Esto existe para conservar seguridad dentro de nuestro sistema.
 
-#### 1.5 Compilacion en java
+#### 1.5 Compilación en java
 
 En java para compilar usamos el mando javac, este posee opciones adicionales:
 
@@ -199,7 +199,7 @@ El comando java que sirve para ejecutar un programa posee tambien las banderas -
 
 ### 2. Clase Math
 #### 2.1 Introducción
-La clase Math es una clase de utilidad (clase que solo tiene metodos estaticos, posee el modificador final y su constructor es privado), que posee metodos y atributos relacionados con matematicas. Esta clase se encuentra en java.lang, asi que no hay que importala.
+La clase Math es una clase de utilidad (clase que solo tiene métodos estáticos, posee el modificador final y su constructor es privado), que posee métodos y atributos relacionados con matemáticas. Esta clase se encuentra en java.lang, así que no hay que importarla.
 
 #### 2.2 Constantes
 Posee dos constantes:
@@ -259,9 +259,9 @@ Math permite determinar el mayor y el menor de dos numeros. Se incluyen ejemplos
 
 ### 3. Clase String
 #### 3.1 Introducción
-La clase String pertenece a java.lang por lo que no hay que importarla, la clase String permite representar texto en un programa en Java, aunque no es la unica clase que permite esto es la mas intuitiva y mas usada. Cabe destacar que los objetos pertenecientes a String son inmutables, es decir, una vez establecidos su valor estos no cambian. Cualquier funcion que se le aplique a un objeto de tipo String crea un nuevo objeto como resultado de la acción. 
+La clase String pertenece a java.lang por lo que no hay que importarla, la clase String permite representar texto en un programa en Java, aunque no es la única clase que permite esto es la más intuitiva y más usada.  Cabe destacar que los objetos pertenecientes a String son inmutables, es decir, una vez establecidos su valor estos no cambian. Cualquier función que se le aplique a un objeto de tipo String crea un nuevo objeto como resultado de la acción.
 
-La clase String es un poco compleja en el uso de constructores, dado el siguiente codigo:
+La clase String es un poco compleja en el uso de constructores, dado el siguiente código:
 
 ```
 String cadena = "Texto";
@@ -274,7 +274,7 @@ Si recordamos lo que el operador == hace, nos regresa true si a == b, a y b se e
 * cadena2 == cadena3  -> False
 * cadena == cadena3   -> False
 
-Normalmente la maquina virtual de java hace que los objetos que tengan la misma cadena en su interior apunten a la misma direccion de memoria, pero al momento de usar el constructor se fuerza a puntar a una nueva dirccion de memoria a pesar que internamente posean la misma informacion, es una mala practica.
+Normalmente la máquina virtual de java hace que los objetos que tengan la misma cadena en su interior apunten a la misma dirección de memoria, pero al momento de usar el constructor se fuerza a apuntar a una nueva dirección de memoria a pesar que internamente posean la misma información, es una mala práctica.
 
 En generar, para comparar objetos hay que utilizar el metodo .equals() en vez del operador == porque este genera fallas en algunas ocaciones.
 
@@ -282,7 +282,7 @@ En generar, para comparar objetos hay que utilizar el metodo .equals() en vez de
 En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de String.
 
 #### 3.4 Clase StringBuffer
-StringBuffer es una clase con la que se puede trabajar con cadenas, StringBuffer no es tan intuitivo como la clase String pero StringBuffer permite generar objetos de tipo mutable, en general, StringBuffer es mas rapido que la clase String pero es menos intuitivo. En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de StringBuffer.
+StringBuffer es una clase con la que se puede trabajar con cadenas, StringBuffer no es tan intuitivo como la clase String pero StringBuffer permite generar objetos de tipo mutable, en general, StringBuffer es más rápido que la clase String pero es menos intuitivo. En la carpeta "Cadenas en Java" se incluyen ejemplos de los métodos de StringBuffer.
 
 ### 4. Clases Envolventes
 #### 4.1 Introducción
@@ -306,7 +306,7 @@ La tabla de relación de los tipos de datos primitivos es:
 
 #### 4.2 AutoBoxing
 Convertir de un tipo primitivo a un objeto de su clase envolvente. Se realiza cuando:
-* Pasado como parametro a un método que espera como parametro un objeto proveniente de una clase envolvente.
+* Pasado como parametro a un método que espera como parámetro un objeto proveniente de una clase envolvente.
 * Asignado a una variable que corresponda a una clase envolvente
 
 Por ejemplo:
@@ -353,7 +353,8 @@ Revisar los codigos de la carpeta "Clase Envolvente" estan relacionado con esto.
 Revisar los codigos de la carpeta "Clase Envolvente" estan relacionado con esto.
 ### 5. Enumeraciones
 #### 5.1 Introducción
-Las enumeraciones son un tipo especial en java que se acemejan a una clase que establecen un conjunto predefinido de variables constanes, cada variable proveniente de una determinada enumeracion debe valer un valor predefinido por esta. Se debe usar enum **siempre** que se posea un conjunto fijo de constantes por su velocidad. Todos los enum heredan de java.lang.Enum por y posen el metodo values() que regresea un arreglo de todas las constantes del enum.
+Las enumeraciones son un tipo especial en java que se asemejan a una clase que establecen un conjunto predefinido de variables constantes, cada variable proveniente de una determinada enumeración debe valer un valor predefinido por esta.  Se debe usar enum **siempre** que se posea un conjunto fijo de constantes por su velocidad. Todos los enum heredan de java.lang.Enum por y poseen el método values() que regresa un arreglo de todas las constantes del enum.
+
 
 A un valor del enum se le pueden aplicar los siguientes metodos:
 
