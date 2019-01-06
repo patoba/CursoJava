@@ -6,15 +6,15 @@
 
 #### [1. Definición de error y excepcion](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#1-definicion-de-error-y-excepción)
 
-#### [2. Clase Exception](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#2-clase-exception)
+#### [2. Clase Exception](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#2-clase-exception-1)
 
 >* Excepciones basicas
 >* Palabras reservadas try, catch y finally
 
-#### [3. Clase Throwable](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#3-clase-throwable) 
+#### [3. Clase Throwable](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#3-clase-throwable-1) 
 >*  Palabras reservadas throw y throws
 
-#### [4. Creacion de excepciones propias](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#4-creacion-de-excepciones-basicas)
+#### [4. Creacion de excepciones propias](https://github.com/patoba/Curso-Java/blob/master/Java%20Intermedio/Excepciones/README.md#4-creacion-de-excepciones-propias-1)
 
 ### Retornos
 1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
