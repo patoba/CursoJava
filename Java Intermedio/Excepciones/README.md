@@ -82,7 +82,7 @@ En la imagen anterior observamos una gran mayoria de las excepciones en Java. A 
 
                            
 #### 2.3 Palabras reservadas try, catch y finally
-Hasta el momento sabemos que las excepciones se pueden manejar pero para manejarlas, utilizamos tres bloques que son fundamentales para su manejo.
+Hasta el momento sabemos que las excepciones se pueden manejar pero para manejarlas. Son manejadas para evitar la interrupción del flujo  del programa y para eso utilizamos tres bloques que son fundamentales para su manejo. 
 
 ##### Try
 Para poder manejar una excepción lo primero que tenemos que hacer es definir en que parte del código puede sucitar. Esa parte es encerrada por un bloque try. 
@@ -96,12 +96,42 @@ bloque catch  . . .
 
 ##### Catch
 
+Al bloque try le podemos asociar el bloque catch el cual define que hacer al detectar la excepcion. Cada bloque de catch define una excepcion definida como argumento. Esta excepción debe ser hija de la clase throwable. 
+
+```
+try {
+
+} catch (ExceptionType name) {
+
+} catch (ExceptionType name) {
+
+}
+```
+
+También es posible cachar varios objetos en la misma sentencia,  utilizando el simbolo '|' en el argumento.
+
+```
+  catch (IOException|SQLException ex) {
+      logger.log(ex);
+      throw ex;
+  }
+```
+
 ##### Finally
+
+El bloque finally siempre se ejecuta al terminar de ejecutarse el bloque try. Esto asegura que sin importar que se encuentre una excepcion o no el bloque finally siempre sera ejecutado.
+
+
+```
+  finally{
+  
+  }
+```
 
 
 ### 3. Clase Throwable 
 #### 3.1 Introducción 
-Para evitar que exista una excepción , primero se tiene que arrojar desde alguna parte del código. Cualquier bloque de código puede arrojar excepciones. Pero existe una manera de definir en que momento en se va a arrojar una excepción en particular.
+Para evitar que exista una excepción , primero se tiene que arrojar desde alguna parte del código. Cualquier bloque de código puede arrojar excepciones. Pero existe una manera de definir en que momento en se va a arrojar una excepción en particular. 
 
 #### 3.2 Palabras reservadas throw y throws 
 
