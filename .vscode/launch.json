@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ClaseMath",
+            "request": "launch",
+            "mainClass": "ClaseMath"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ejemplo",
+            "request": "launch",
+            "mainClass": "Ejemplo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
+            "mainClass": "Demo"
+        }
+    ]
+}
