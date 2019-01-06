@@ -2,14 +2,14 @@
 
 ### Indice
 
-#### [1. Introducción]
+#### [1. Introducción](https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos#1-introducci%C3%B3n-1)
 >* Paquetes en Java
 >* Encapsulamiento
 >* Modificadores: final y static
 >* Mutabilidad
 >* Compilacion en java
 
-#### [2. Clase Math]
+#### [2. Clase Math](https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos#2-clase-math-1)
 >* Introducción
 >* Constantes
 >* Funciones trigonometricas
@@ -19,20 +19,20 @@
 >* Numeros Aleatorios
 >* Maximos y Minimos
 
-#### [3. Clase String]
+#### [3. Clase String](https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos#3-clase-string-1)
 >* Introducción
 >* Formato y Conversiones
 >* Acciones sobre un String
 >* Clase String Buffer
 
-#### [4. Clases Envolventes]
+#### [4. Clases Envolventes](https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos#4-clases-envolventes-1)
 >* Introducción
 >* Autoboxing
 >* Unboxing
 >* Metodos Estaticos
 >* Metodos de Instancia
 
-#### [5. Enumeraciones]
+#### [5. Enumeraciones](https://github.com/patoba/Curso-Java/tree/master/Java%20Basico/Manipulacion%20de%20Datos#5-enumeraciones-1)
 >* Introducción
 >* Creación
 
@@ -201,23 +201,61 @@ double senoHiperbolico = Math.sin(Math.PI / 2);
 * Tambien existe la del coseno y tangente.
 
 #### 2.4 Funciones exponencial y logaritmica
+La funcion exponencial en Math eleva el numero e a cualqueir numero flotante. En math se encuentran dos funciones de logaritmos una base 10 y la otra base e. Se incluyen ejemplos de estas funciones en la carpeta "Matematicas en Java".
 
+Una funcion que permite hallar el logaritmo de cualquier base es:
 
+```
+public static double logaritmoBaseA(double num, double a){
+    return Math.log10(num) / Math.log10(a);
+}
+```
 #### 2.5 Potencia y Raiz Cuadrada
-
+La clase Math incluye funciones para cualquier potencia y para raiz cuadrada. Se incluyen ejemplos de estas funciones en la carpeta "Matematicas en Java". 
 
 #### 2.6 Rendondeos de decimales
+Existen 4 tipos de redondeos usados en Math, esta funcion ejemplifica todos:
+
+```
+public static void diferentesRedondeosDeMath(double valor){
+        int porFloor = (int)Math.floor(valor); // Hacia abajo
+        int porCeil = (int)Math.ceil(valor); // Hacia arriba
+        int porRound = (int)Math.round(valor); // Entero mas cercano a valor
+        int porCasting = (int)valor; 
+}
+```
+
+Se incluyen ejemplos de estas funciones en la carpeta "Matematicas en Java". 
 
 #### 2.7 Numeros Aleatorios
+Math permite crear numeros aleatorios. Se incluyen ejemplos de estas funciones en la carpeta "Matematicas en Java". 
 
 #### 2.8 Maximos y Minimos
+Math permite determinar el mayor y el menor de dos numeros. Se incluyen ejemplos de estas funciones en la carpeta "Matematicas en Java". 
 
 ### 3. Clase String
 #### 3.1 Introducción
+La clase String pertenece a java.lang por lo que no hay que importarla, la clase String permite representar texto en un programa en Java, aunque no es la unica clase que permite esto es la mas intuitiva y mas usada. Cabe destacar que los objetos pertenecientes a String son inmutables, es decir, una vez establecidos su valor estos no cambian. Cualquier funcion que se le aplique a un objeto de tipo String crea un nuevo objeto como resultado de la acción. 
 
-#### 3.2 Formato y Conversiones
+La clase String es un poco compleja en el uso de constructores, dado el siguiente codigo:
+
+```
+String cadena = "Texto";
+String cadena2 = "Texto";
+String cadena3 = new String("Texto");
+```
+
+Si recordamos lo que el operador == hace, nos regresa true si a == b, a y b se encuentran en la misma direccion de memoria. El resultado de ese operador en las variables es:
+* cadena == cadena2   -> True
+* cadena2 == cadena3  -> False
+* cadena == cadena3   -> False
+
+Normalmente la maquina virtual de java hace que los objetos que tengan la misma cadena en su interior apunten a la misma direccion de memoria, pero al momento de usar el constructor se fuerza a puntar a una nueva dirccion de memoria a pesar que internamente posean la misma informacion, es una mala practica.
+
+En generar, para comparar objetos hay que utilizar el metodo .equals() en vez del operador == porque este genera fallas en algunas ocaciones.
 
 #### 3.3 Acciones sobre un String
+En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de String.
 
 #### 3.4 Clase String Buffer
 
@@ -289,8 +327,28 @@ Revisar los codigos de la carpeta "Clase Envolvente" estan relacionado con esto.
 #### 4.5 Metodos de Instancia
 Revisar los codigos de la carpeta "Clase Envolvente" estan relacionado con esto.
 ### 5. Enumeraciones
-
 #### 5.1 Introducción
+Las enumeraciones son un tipo especial en java que se acemejan a una clase que establecen un conjunto predefinido de variables constanes, cada variable proveniente de una determinada enumeracion debe valer un valor predefinido por esta. Se debe usar enum **siempre** que se posea un conjunto fijo de constantes por su velocidad. Todos los enum heredan de java.lang.Enum por y posen el metodo values() que regresea un arreglo de todas las constantes del enum.
+
+A un valor del enum se le pueden aplicar los siguientes metodos:
+
+| Tipo   | Metodo      | Descripcion                                       |
+|--------|-------------|---------------------------------------------------|
+| String | name()      | Regresa el nombre del valor del enum              |
+| int    | ordinal()   | Posicion de la constante dentro del enum          |
+| int    | compareTo() | Compara dos constantes del enum segun su posicion |
 
 #### 5.2 Creación
+Un enum se crea de forma similar a una clase:
 
+```
+public enum Ejemplo{
+  VALOR1, VALOR2, VALOR3
+}
+```
+
+**Notas:**
+* Los nombres de los valores van con mayuscula porque son constantes
+* A un enum solo se le puede aplicar los modificadores de acceso private y default
+* Un enum puede tener metodos, atributos y constructor.
+* Se incluyen ejemplos en la carpeta "Enumeraciones"
