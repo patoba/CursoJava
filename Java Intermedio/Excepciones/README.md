@@ -63,6 +63,7 @@ En el tema anterior, vimos que las situaciones de la clase Exception son las man
 #### 2.2 Excepciones Básicas 
 En la imagen anterior observamos una gran mayoria de las excepciones en Java. A continuación definiremos unas cuantas de ellas.
 
+
 | Excepción                       | Descripción                                                                               | Ejemplo                            |
 |---------------------------------|-------------------------------------------------------------------------------------------|------------------------------------|
 | Arithmetic Exception            | Es arrojada cuando ocurre una excepción una operación aritmética.                         | División entre cero.                |
