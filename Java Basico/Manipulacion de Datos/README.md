@@ -83,13 +83,19 @@ las opciones adicionales mas importantes son:
 -cp [ubicacion] esta bandera nos permite establecer donde se encuentra algunos .class que necesitamos
 ```
 
+Por ejemplo, si deseamos compilar la class Ejemplo.java y queremos guardar la clase en una carpeta superior:
+
+```
+javac -d .. Ejemplo.java
+```
+
 Si queremos compilar todos los .java de una carpeta podemos usar el asterisco:
 
 ```
 javac *.java
 ```
 
-
+El comando
 
 
 
