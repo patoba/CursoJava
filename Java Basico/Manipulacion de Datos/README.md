@@ -72,6 +72,28 @@ import java.util.*;
 
 No es recomendable importar todas las clases de un paquete, porque hace al compilador un poco mas lento y genera errores si tenemos dos o mas clases con el mismo nombre. 
 
+Podemos crear paquetes usando la palabra reservada `package nombre.del.paquete;` (esta linea debe ser la primera de nuestro codigo), de esta forma indicamos que estamos en un paquete llamado "nombre.del.paquete", todo lo que queramo usar (clases, interfaces, excepciones, etc.) que no se encuentre en nuestro paquete hay que importarlo. Si no definimos un paquete se crea un paquete llamado `default`.
+
+En java para compilar usamos el mando javac, este posee opciones adicionales:
+
+```
+javac [opciones adicionales] [nombre de archivo .java]
+las opciones adicionales mas importantes son:
+-d [ubicacion]  esta opcion (bandera) nos permite establecer donde queremos guardar los .class
+-cp [ubicacion] esta bandera nos permite establecer donde se encuentra algunos .class que necesitamos
+```
+
+Si queremos compilar todos los .java de una carpeta podemos usar el asterisco:
+
+```
+javac *.java
+```
+
+
+
+
+
+
 #### 1.2 Encapsulamiento
 Encapsulamiento consiste en la ocultación de los atributos (campos) para que las demas clases (o determinadas) no puedan acceder directamente a ellos. En Java el encapsulamiento se representa con modificadores de acceso, en esta tabla se representa su valor:
 
@@ -81,7 +103,7 @@ Encapsulamiento consiste en la ocultación de los atributos (campos) para que la
 | Desde cualquier clase del mismo paquete    | Si     | Si        | Si      | No      |
 | Desde una subclase del mismo paquete       | Si     | Si        | Si      | No      |
 | Desde una subclase fuera del mismo paquete | Si     | Si        | No      | No      |
-| Desde cualquier clase fuera del paquete    | Si     | No        | No      | NO      |
+| Desde cualquier clase fuera del paquete    | Si     | No        | No      | No      |
 
 **Notas:**
 * Subclase hace referencia a conceptos de herencia (se ve posteriormente).
@@ -170,7 +192,7 @@ Mutabilidad hace referencia a el alteramiento de un objeto, es decir, poseemos o
 
 Esto existe para conservar seguridad dentro de nuestro sistema.
 
-#### 1.4 Compilacion en java
+#### 1.5 Compilacion en java
 
 
 ### 2. Clase Math
@@ -257,7 +279,8 @@ En generar, para comparar objetos hay que utilizar el metodo .equals() en vez de
 #### 3.3 Acciones sobre un String
 En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de String.
 
-#### 3.4 Clase String Buffer
+#### 3.4 Clase StringBuffer
+StringBuffer es una clase con la que se puede trabajar con cadenas, StringBuffer no es tan intuitivo como la clase String pero StringBuffer permite generar objetos de tipo mutable,  
 
 ### 4. Clases Envolventes
 #### 4.1 Introducción
