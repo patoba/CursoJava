@@ -282,7 +282,7 @@ En generar, para comparar objetos hay que utilizar el metodo .equals() en vez de
 En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de String.
 
 #### 3.4 Clase StringBuffer
-StringBuffer es una clase con la que se puede trabajar con cadenas, StringBuffer no es tan intuitivo como la clase String pero StringBuffer permite generar objetos de tipo mutable,  
+StringBuffer es una clase con la que se puede trabajar con cadenas, StringBuffer no es tan intuitivo como la clase String pero StringBuffer permite generar objetos de tipo mutable, en general, StringBuffer es mas rapido que la clase String pero es menos intuitivo. En la carpeta "Cadenas en Java" se incluyen ejemplos de los metodos de StringBuffer.
 
 ### 4. Clases Envolventes
 #### 4.1 Introducción
