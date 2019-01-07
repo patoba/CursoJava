@@ -49,7 +49,7 @@
 * **Interface:** Clase especial que todos sus métodos son abstractos.
 * **Framework:** Conjunto de herramientas que una persona o conjuntos de personas ya desarrollo y podemos utilizarlas a nuestro antojo.
 * **Concurrencia:** Capacidad de que distintas partes de un algoritmo puedan ejecutarse casi simultaneamente sin afectar el resultado final.
-* **Dato:** Representación de un atributo.
+* **Dato:** Representación simbolica de un atributo.
 
 ### 1. Estructuras de datos
 #### 1.1 Introducción
