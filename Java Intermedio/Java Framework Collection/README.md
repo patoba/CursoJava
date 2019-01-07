@@ -46,10 +46,10 @@
 2. [Java Intermedio](https://github.com/patoba/Curso-Java/tree/master/Java%20Intermedio 'Java Intermedio')
 - - - -
 ### 0. Conceptos Importantes
-* **Interface:** 
-* **Framework:** 
-* **Concurrencia:** 
-* **Dato:**  
+* **Interface:** Clase especial que todos sus métodos son abstractos.
+* **Framework:** Conjunto de herramientas que una persona o conjuntos de personas ya desarrollo y podemos utilizarlas a nuestro antojo.
+* **Concurrencia:** Capacidad de que distintas partes de un algoritmo puedan ejecutarse casi simultaneamente sin afectar el resultado final.
+* **Dato:** Representación de un atributo.
 
 ### 1. Estructuras de datos
 #### 1.1 Introducción
