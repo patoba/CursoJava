@@ -1,4 +1,4 @@
-##Arreglos e introducción a Java Collections
+## Arreglos e introducción a Java Collections
 
 ### Indice
 
@@ -45,29 +45,29 @@ Formas de inicializar un arreglo
 #### 1.4 Acceso a los elementos de un arreglo
 Se puede acceder a un elemento de un arreglo en específico indicando su índice dentro de unos corchetes, si se desea imprimir cada valor se puede utilizar un ciclo de iteración (while/for)
 
->>int c[]={12,3,27,16,4,51,8,40};
->>System.out.println(c[2]); //imprime 27
->>//Ciclo para imprimir todos los valores
->>for(int i=0;i<c.lenght;i++){
->>	System.out.println(c);
->>}
+int c[]={12,3,27,16,4,51,8,40};
+System.out.println(c[2]); //imprime 27
+//Ciclo para imprimir todos los valores
+for(int i=0;i<c.lenght;i++){
+	System.out.println(c);
+}
 
 #### 1.5 ¿Qué es el ciclo for mejorado?
 En Java existe una versión mejorada del ciclo for, conocida como for-each en otros lenguajes, que permite una mayor accesibilidad a los elementos de un arreglo ó conjunto.
 
->>String paises[]={“México”,”Canadá”,”Rusia”};
->>for(String pais : paises){
->>	System.out.println(pais);
->>}
+String paises[]={“México”,”Canadá”,”Rusia”};
+for(String pais : paises){
+	System.out.println(pais);
+}
 
 #### 1.6 Paso de arreglos a métodos
 Un arreglo se puede pasar a un método como un parámetro, al hacerlo cualquier cambio al parámetro afecta a la variable original.
 
->>void funcion(int[] arreglo){
->>	for(int i = 0; i < arreglo.length; i++){
->>		arreglo[i] = 0;
->>	}
->>}
+void funcion(int[] arreglo){
+	for(int i = 0; i < arreglo.length; i++){
+		arreglo[i] = 0;
+	}
+}
 
 Esta función inicializa el arreglo en cero.
 
@@ -76,9 +76,9 @@ Existe una forma para que se le pueda pasar a una función una serie elementos (
 
 En la función hay que indicar que el argumento de longitud variable, se realiza de la siguiente forma:
 
->>void funcion(String… ejemplo){
->>	…
->>}
+void funcion(String… ejemplo){
+	…
+}
 
 Para pasar varios elementos se realiza de la siguiente forma:
 
@@ -96,14 +96,14 @@ La forma de declarar un arreglo de este tipo es:
 
 Para acceder a los elementos de un arreglo bidimensional hay que indicar el número de fila y columna al que queremos acceder.
 
->>int arregloBi[][]={{1,2,3},{4,5,6}};
->>System.out.println(arregloBi[1][2]);//imprime 6
->>//para imprimir todos en pantalla
->>for(int i=0;i<arregloBi.length;i++){//filas
->>	for(int j=0;j<arregloBi[i].length;j++){//columnas
->>		System.out.println(arregloBi[i][j]);
->>	}
->>}
+int arregloBi[][]={{1,2,3},{4,5,6}};
+System.out.println(arregloBi[1][2]);//imprime 6
+//para imprimir todos en pantalla
+for(int i=0;i<arregloBi.length;i++){//filas
+	for(int j=0;j<arregloBi[i].length;j++){//columnas
+		System.out.println(arregloBi[i][j]);
+	}
+}
 
 #### 1.10 Arreglo multidimensional
 
@@ -111,7 +111,7 @@ Un arreglo multidimensional está formado de más de dos dimensiones, se declara
 int arregloMulti[][][];
 se inicializa, nuevamente, de una forma parecida al bidimensional:
 
->>int arregloMulti[][][]=new int[num1][num2][num3];
+int arregloMulti[][][]=new int[num1][num2][num3];
 
 ### 2. Clase Arrays
 #### 2.1 Clase Arrays y algunos de sus métodos
