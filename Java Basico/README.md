@@ -1,8 +1,4 @@
 ## Java Basico
 ### Descripcion
-En esta seccion se encuentra
+En esta seccion se encuentran los archivos correspondientes al curso de Java Básico.
 
-### Indice
-
-### Retornos
-1. [Curso Java](https://github.com/patoba/Curso-Java 'Curso Java')
