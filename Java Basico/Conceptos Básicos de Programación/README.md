@@ -121,7 +121,7 @@ Son aquellos de la forma (boolean, boolean) => boolean, por ejemplo:
 | Operador |                Descripción               |   Ejemplo   | Salida |
 |:--------:|:----------------------------------------:|:-----------:|:------:|
 |    &&    |      Regresa true si ambos son true      | true&&false |  false |
-|    ||    | Regresa true si por lo menos uno es true | true||false |  true  |
+|    \|\|    | Regresa true si por lo menos uno es true | true\|\|false |  true  |
 |     !    |           Regresa lo contrario           |    !true    |  false |
 
 #### 3.4 Operador Asignación
