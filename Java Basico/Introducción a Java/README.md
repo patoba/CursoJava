@@ -74,14 +74,35 @@ Conjunto de estructuras creadas por los creadores de java que da a los desarroll
 
 ### 3. Introducción a la terminal y línea de comandos
 Comandos basicos:
-cd "dir" - cambiarse al directorio dir
-	   . - Referencia al directorio actual
-	  .. - Referencia al directorio padre
-ls       - Muestra los archivos actuales
-mkdir    - Crea una carpeta
-rm       - Borra un archivo 
-cp       - Copia un archivo
+* cd "dir" - cambiarse al directorio dir
+*	   . - Referencia al directorio actual
+*	  .. - Referencia al directorio padre
+* ls       - Muestra los archivos actuales
+* mkdir    - Crea una carpeta
+* rm       - Borra un archivo 
+* cp       - Copia un archivo
 
 ### 4. Compilación y ejecución de programas
-java     - Manda a llamar el interprete de java (JRE)
-javac    - Manda a llamar el compilador de java (JDK)
+
+En java para compilar usamos el mando javac, este posee opciones adicionales:
+
+```
+javac [opciones adicionales] [nombre de archivo .java]
+las opciones adicionales mas importantes son:
+-d [ubicacion]  esta opcion (bandera) nos permite establecer donde queremos guardar los .class
+-cp [ubicacion] esta bandera nos permite establecer donde se encuentra algunos .class que necesitamos
+```
+
+Por ejemplo, si deseamos compilar la class Ejemplo.java y queremos guardar la clase en una carpeta superior:
+
+```
+javac -d .. Ejemplo.java
+```
+
+Si queremos compilar todos los .java de una carpeta podemos usar el asterisco:
+
+```
+javac *.java
+```
+
+El comando java que sirve para ejecutar un programa posee tambien las banderas -d y -cp.

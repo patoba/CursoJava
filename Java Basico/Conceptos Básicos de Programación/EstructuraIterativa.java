@@ -1,7 +1,8 @@
 class Main{
 
     public static void main(String[] args) {
-        System.out.println(pow(7, 2));
+        int n = Integer.MAX_VALUE;
+        System.out.println(suma(n) == n*(n+1) / 2  );
     }
 
     static int factorial(int num){
@@ -9,6 +10,7 @@ class Main{
             return 1;
         return num * factorial(num - 1);
     }
+    
 
     static int factorial2(int num){
         int factorial = 1;
