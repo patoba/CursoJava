@@ -22,6 +22,8 @@ class Main{
     }
 
     // Ejercicios
+    
+    // Dejar tablas de verdad
 
     /*
         Un año es biciestr si y solo si es divisible entre 4 y no divisible entre 100, o si es divisible entre 400.
